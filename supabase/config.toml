@@ -1,0 +1,32 @@
+# Supabase Configuration for SportsTradeX
+
+# Project settings
+project_id = "sportstradex"
+project_name = "SportsTradeX"
+
+# Database configuration
+[db]
+  port = 5432
+  shadow_port = 5433
+  major_version = 15
+
+# Auth configuration
+[auth]
+  site_url = "http://localhost:3000"
+  additional_redirect_urls = ["http://localhost:3000/*"]
+
+# JWT settings
+[jwt]
+  exp = 3600 # 1 hour
+  secret = "super-secret-jwt-token-with-at-least-32-characters-long"
+
+# Storage settings
+[storage]
+  file_size_limit = "50MiB"
+
+# API settings
+[api]
+  port = 54321
+  schemas = ["public", "storage", "graphql_public"]
+  extra_search_path = ["public", "extensions"]
+  max_rows = 1000

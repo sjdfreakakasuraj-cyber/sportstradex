@@ -1,0 +1,22 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/next",
+      "config": {
+        "includeFiles": ["next.config.mjs"]
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/"
+    }
+  ],
+  "env": {
+    "NEXT_PUBLIC_SUPABASE_URL": "https://lztknyehgjbnlexqicxc.supabase.co",
+    "NEXT_PUBLIC_SUPABASE_ANON_KEY": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imx6dGtueWVoZ2pibmxleHFpY3hjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjU3MjE0MzgsImV4cCI6MjA4MTI5NzQzOH0.yAI-8Fx3hqtmRxHGSqGU53YZxXa0vQwdXbpo4agg2-s"
+  }
+}
