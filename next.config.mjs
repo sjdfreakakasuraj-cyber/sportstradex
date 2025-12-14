@@ -1,4 +1,5 @@
 /** @type {import('next').NextConfig} */
+// Fixed configuration for Vercel deployment
 const nextConfig = {
   // Enable image optimization
   images: {
