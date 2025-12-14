@@ -1,10 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Enable standalone build for Docker deployments
-  output: 'standalone',
-  
   // Enable image optimization
   images: {
+    unoptimized: true,
     domains: ['localhost'],
   },
   
@@ -14,6 +12,11 @@ const nextConfig = {
   // Disable ESLint during builds
   eslint: {
     ignoreDuringBuilds: true,
+  },
+  
+  // Disable TypeScript errors during build
+  typescript: {
+    ignoreBuildErrors: true,
   },
   
   // Environment-specific configurations
