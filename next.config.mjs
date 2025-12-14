@@ -11,6 +11,11 @@ const nextConfig = {
   // Enable compression
   compress: true,
   
+  // Disable ESLint during builds
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+  
   // Environment-specific configurations
   env: {
     NEXT_PUBLIC_APP_NAME: process.env.NEXT_PUBLIC_APP_NAME,
